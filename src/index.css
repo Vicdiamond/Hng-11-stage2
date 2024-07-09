@@ -1,13 +1,87 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-radio input[type="radio"] {
+  appearance: none;
+  background-color: #fff;
+  /* margin: 0; */
+  /* font: inherit; */
+  color: #d13303;
+  width: 1.75em;
+  height: 1.75em;
+  border: 0.15em solid #9ca3af;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.custom-radio input[type="radio"]::before {
+  content: "";
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #d13303;
+}
+
+.custom-radio input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+.custom-radio label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.custom-radio label span {
+  margin-left: 0.5em;
+}
+
+.custom-radio input[type="radio"]:checked {
+  border-color: #d13303;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: #d13303;
+  width: 1.75em;
+  height: 1.75em;
+  border: 0.15em solid #9ca3af;
+  border-radius: 0.25em;
+  display: grid;
+  place-content: center;
+}
+
+.custom-checkbox input[type="checkbox"]::before {
+  content: "";
+  width: 1em;
+  height: 1em;
+  clip-path: polygon(14% 44%, 0% 65%, 50% 100%, 100% 15%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  background-color: currentColor;
+}
+
+.custom-checkbox input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.custom-checkbox label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.custom-checkbox label span {
+  margin-left: 0.5em;
+}
+
+.custom-checkbox input[type="checkbox"]:checked {
+  border-color: #d13303;
 }
