@@ -12,7 +12,7 @@ import Cart from './Cart/Cart'
 
 function App () {
   // const { state, dispatch } = useReducer(reducer, initialState)
-  const [status, setStatus] = useState('cart')
+  const [status, setStatus] = useState('menu')
   return (
     <div className='bg-[#F6F6F6]'>
       <Header setStatus={setStatus} />
