@@ -1,203 +1,27 @@
 import MealMenu from './MealMenu'
-import SectionHead from './SectionHead'
-function MenuList () {
+import SectionHead from '../SectionHead'
+function MenuList ({
+  onHandleAddCart,
+  products,
+  setStatus,
+  onHandleSetDescription
+}) {
   return (
     <div className='m-7'>
       <div className='min-[1120px]:px-[100px]'>
-        <SectionHead title='Snacks' />
+        <SectionHead title='Menu Listing' />
         <div className='mt-5 grid w-full min-[420px]:grid-cols-2 min-[810px]:grid-cols-3 min-[1160px]:grid-cols-4 gap-4'>
-          <MealMenu
-            mealName='Cheif Burger'
-            image={`${process.env.PUBLIC_URL}/assets/images/Burger.png`}
-          />
-          <MealMenu
-            mealName='Egg Roll'
-            image={`${process.env.PUBLIC_URL}/assets/images/Eggroll.png`}
-          />
-          <MealMenu
-            mealName='Shawarma'
-            image={`${process.env.PUBLIC_URL}/assets/images/Shawarma.png`}
-          />
-          <MealMenu
-            mealName='Chicken Pie'
-            image={`${process.env.PUBLIC_URL}/assets/images/Chickeen-pie.png`}
-          />
-        </div>
-      </div>
-
-      <div className='min-[1120px]:px-[100px]'>
-        <SectionHead title='Soup' />
-        <div className='mt-5 grid w-full min-[420px]:grid-cols-2 min-[810px]:grid-cols-3 min-[1160px]:grid-cols-4 gap-4'>
-          <MealMenu
-            mealName='Vegetable Soup'
-            image={`${process.env.PUBLIC_URL}/assets/images/Vegetable-soup.png`}
-          />
-          <MealMenu
-            mealName='Oha Soup'
-            image={`${process.env.PUBLIC_URL}/assets/images/Oha-soup.png`}
-          />
-          <MealMenu
-            mealName='Egusi Soup'
-            image={`${process.env.PUBLIC_URL}/assets/images/Egusi-soup.png`}
-          />
-          <MealMenu
-            mealName='Vegetable Soup'
-            image={`${process.env.PUBLIC_URL}/assets/images/Vegetable-soup.png`}
-          />
-        </div>
-      </div>
-
-      <div className='min-[1120px]:px-[100px]'>
-        <SectionHead title='Meals' />
-        <div className='mt-5 grid w-full min-[420px]:grid-cols-2 min-[810px]:grid-cols-3 min-[1160px]:grid-cols-4 gap-4'>
-          <MealMenu
-            mealName='Jollof Rice'
-            image={`${process.env.PUBLIC_URL}/assets/images/Jollof-rice.png`}
-          />
-          <MealMenu
-            mealName='Fried Rice'
-            image={`${process.env.PUBLIC_URL}/assets/images/Fried-rice.png`}
-          />
-          <MealMenu
-            mealName='Beans and plantain'
-            image={`${process.env.PUBLIC_URL}/assets/images/Beans.png`}
-          />
-          <MealMenu
-            mealName='Noodles'
-            image={`${process.env.PUBLIC_URL}/assets/images/Noodles.png`}
-          />
-        </div>
-      </div>
-
-      <div className='min-[1120px]:px-[100px]'>
-        <SectionHead title='Salad' />
-        <div className='mt-5 grid w-full min-[420px]:grid-cols-2 min-[810px]:grid-cols-3 min-[1160px]:grid-cols-4 gap-4'>
-          <MealMenu
-            mealName='Jollof Rice'
-            image={`${process.env.PUBLIC_URL}/assets/images/Chicken-salad.png`}
-          />
-          <MealMenu
-            mealName='Fried Rice'
-            image={`${process.env.PUBLIC_URL}/assets/images/Coleslaw.png`}
-          />
-          <MealMenu
-            mealName='Beans and plantain'
-            image={`${process.env.PUBLIC_URL}/assets/images/Vegetable-salad.png`}
-          />
-          <MealMenu
-            mealName='Noodles'
-            image={`${process.env.PUBLIC_URL}/assets/images/Fruit-salad.png`}
-          />
-        </div>
-      </div>
-
-      <div className='min-[1120px]:px-[100px]'>
-        <SectionHead title='Meat' />
-        <div className='mt-5  grid w-full min-[420px]:grid-cols-2 min-[810px]:grid-cols-3 min-[1160px]:grid-cols-4 gap-4'>
-          <MealMenu
-            mealName='Jollof Rice'
-            image={`${process.env.PUBLIC_URL}/assets/images/Rotissorie-chicken.png`}
-          />
-          <MealMenu
-            mealName='Fried Rice'
-            image={`${process.env.PUBLIC_URL}/assets/images/Peppered-beef.png`}
-          />
-          <MealMenu
-            mealName='Beans and plantain'
-            image={`${process.env.PUBLIC_URL}/assets/images/Nkwobi.png`}
-          />
-          <MealMenu
-            mealName='Noodles'
-            image={`${process.env.PUBLIC_URL}/assets/images/Goat-meat.png`}
-          />
-        </div>
-      </div>
-
-      <div className='min-[1120px]:px-[100px]'>
-        <SectionHead title='Coffee & Tea' />
-        <div className='mt-5 grid w-full min-[420px]:grid-cols-2 min-[810px]:grid-cols-3 min-[1160px]:grid-cols-4 gap-4'>
-          <MealMenu
-            mealName='Jollof Rice'
-            image={`${process.env.PUBLIC_URL}/assets/images/Decaf-coffee.png`}
-          />
-          <MealMenu
-            mealName='Fried Rice'
-            image={`${process.env.PUBLIC_URL}/assets/images/Fresh-mint-tea.png`}
-          />
-          <MealMenu
-            mealName='Beans and plantain'
-            image={`${process.env.PUBLIC_URL}/assets/images/Chocolate-tea.png`}
-          />
-          <MealMenu
-            mealName='Noodles'
-            image={`${process.env.PUBLIC_URL}/assets/images/Black-coffee.png`}
-          />
-        </div>
-      </div>
-
-      <div className='min-[1120px]:px-[100px]'>
-        <SectionHead title='Drinks' />
-        <div className='mt-5 grid w-full min-[420px]:grid-cols-2 min-[810px]:grid-cols-3 min-[1160px]:grid-cols-4 gap-4'>
-          <MealMenu
-            mealName='Jollof Rice'
-            image={`${process.env.PUBLIC_URL}/assets/images/Soft-drink.png`}
-          />
-          <MealMenu
-            mealName='Fried Rice'
-            image={`${process.env.PUBLIC_URL}/assets/images/Energy-drink.png`}
-          />
-          <MealMenu
-            mealName='Beans and plantain'
-            image={`${process.env.PUBLIC_URL}/assets/images/Fruit-juice.png`}
-          />
-          <MealMenu
-            mealName='Noodles'
-            image={`${process.env.PUBLIC_URL}/assets/images/Packaged-juice.png`}
-          />
-        </div>
-      </div>
-
-      <div className='min-[1120px]:px-[100px]'>
-        <SectionHead title='Ice Cream' />
-        <div className='mt-5 grid w-full min-[420px]:grid-cols-2 min-[810px]:grid-cols-3 min-[1160px]:grid-cols-4 gap-4'>
-          <MealMenu
-            mealName='Jollof Rice'
-            image={`${process.env.PUBLIC_URL}/assets/images/Fruit-icecream.png`}
-          />
-          <MealMenu
-            mealName='Fried Rice'
-            image={`${process.env.PUBLIC_URL}/assets/images/Chocolate-icecream.png`}
-          />
-          <MealMenu
-            mealName='Beans and plantain'
-            image={`${process.env.PUBLIC_URL}/assets/images/Vanilla-flavour.png`}
-          />
-          <MealMenu
-            mealName='Noodles'
-            image={`${process.env.PUBLIC_URL}/assets/images/Fruit-youghurt.png`}
-          />
-        </div>
-      </div>
-
-      <div className='min-[1120px]:px-[100px]'>
-        <SectionHead title='Swallow' />
-        <div className='mt-5 grid w-full min-[420px]:grid-cols-2 min-[810px]:grid-cols-3 min-[1160px]:grid-cols-4 gap-4'>
-          <MealMenu
-            mealName='Jollof Rice'
-            image={`${process.env.PUBLIC_URL}/assets/images/Eba.png`}
-          />
-          <MealMenu
-            mealName='Fried Rice'
-            image={`${process.env.PUBLIC_URL}/assets/images/Semo.png`}
-          />
-          <MealMenu
-            mealName='Beans and plantain'
-            image={`${process.env.PUBLIC_URL}/assets/images/Amala.png`}
-          />
-          <MealMenu
-            mealName='Noodles'
-            image={`${process.env.PUBLIC_URL}/assets/images/Fufu.png`}
-          />
+          {products.map(product => (
+            <MealMenu
+              mealName={product.name}
+              image={`https://api.timbu.cloud/images/${product.photos[0].url}`}
+              onHandleAddCart={onHandleAddCart}
+              key={product.name}
+              product={product}
+              setStatus={setStatus}
+              onHandleSetDescription={onHandleSetDescription}
+            />
+          ))}
         </div>
       </div>
     </div>
@@ -274,3 +98,195 @@ export default MenuList
           46
         </p>
       </div> */
+
+/* <div className='min-[1120px]:px-[100px]'>
+        <SectionHead title='Soup' />
+        <div className='mt-5 grid w-full min-[420px]:grid-cols-2 min-[810px]:grid-cols-3 min-[1160px]:grid-cols-4 gap-4'>
+          <MealMenu
+            mealName='Vegetable Soup'
+            image={`${process.env.PUBLIC_URL}/assets/img/soup1.png`}
+          />
+          <MealMenu
+            mealName='Oha Soup'
+            image={`${process.env.PUBLIC_URL}/assets/img/soup2.png`}
+          />
+          <MealMenu
+            mealName='Egusi Soup'
+            image={`${process.env.PUBLIC_URL}/assets/img/soup3.png`}
+          />
+          <MealMenu
+            mealName='Vegetable Soup'
+            image={`${process.env.PUBLIC_URL}/assets/img/soup4.png`}
+          />
+        </div>
+      </div>
+
+      <div className='min-[1120px]:px-[100px]'>
+        <SectionHead title='Meals' />
+        <div className='mt-5 grid w-full min-[420px]:grid-cols-2 min-[810px]:grid-cols-3 min-[1160px]:grid-cols-4 gap-4'>
+          <MealMenu
+            mealName='Jollof Rice'
+            image={`${process.env.PUBLIC_URL}/assets/img/Meal1.png`}
+          />
+          <MealMenu
+            mealName='Fried Rice'
+            image={`${process.env.PUBLIC_URL}/assets/img/Meal2.png`}
+          />
+          <MealMenu
+            mealName='Beans and plantain'
+            image={`${process.env.PUBLIC_URL}/assets/img/Meal3.png`}
+          />
+          <MealMenu
+            mealName='Noodles'
+            image={`${process.env.PUBLIC_URL}/assets/img/Meal4.png`}
+          />
+        </div>
+      </div>
+
+      <div className='min-[1120px]:px-[100px]'>
+        <SectionHead title='Salad' />
+        <div className='mt-5 grid w-full min-[420px]:grid-cols-2 min-[810px]:grid-cols-3 min-[1160px]:grid-cols-4 gap-4'>
+          <MealMenu
+            mealName='Jollof Rice'
+            image={`${process.env.PUBLIC_URL}/assets/img/salad1.png`}
+          />
+          <MealMenu
+            mealName='Fried Rice'
+            image={`${process.env.PUBLIC_URL}/assets/img/salad2.png`}
+          />
+          <MealMenu
+            mealName='Beans and plantain'
+            image={`${process.env.PUBLIC_URL}/assets/img/salad3.png`}
+          />
+          <MealMenu
+            mealName='Noodles'
+            image={`${process.env.PUBLIC_URL}/assets/img/salad4.png`}
+          />
+        </div>
+      </div>
+
+      <div className='min-[1120px]:px-[100px]'>
+        <SectionHead title='Meat' />
+        <div className='mt-5  grid w-full min-[420px]:grid-cols-2 min-[810px]:grid-cols-3 min-[1160px]:grid-cols-4 gap-4'>
+          <MealMenu
+            mealName='Jollof Rice'
+            image={`${process.env.PUBLIC_URL}/assets/img/meat1.png`}
+          />
+          <MealMenu
+            mealName='Fried Rice'
+            image={`${process.env.PUBLIC_URL}/assets/img/meat2.png`}
+          />
+          <MealMenu
+            mealName='Beans and plantain'
+            image={`${process.env.PUBLIC_URL}/assets/img/meat3.png`}
+          />
+          <MealMenu
+            mealName='Noodles'
+            image={`${process.env.PUBLIC_URL}/assets/img/meat4.png`}
+          />
+        </div>
+      </div>
+
+      <div className='min-[1120px]:px-[100px]'>
+        <SectionHead title='Coffee & Tea' />
+        <div className='mt-5 grid w-full min-[420px]:grid-cols-2 min-[810px]:grid-cols-3 min-[1160px]:grid-cols-4 gap-4'>
+          <MealMenu
+            mealName='Jollof Rice'
+            image={`${process.env.PUBLIC_URL}/assets/img/tea1.png`}
+          />
+          <MealMenu
+            mealName='Fried Rice'
+            image={`${process.env.PUBLIC_URL}/assets/img/tea2.png`}
+          />
+          <MealMenu
+            mealName='Beans and plantain'
+            image={`${process.env.PUBLIC_URL}/assets/img/tea3.png`}
+          />
+          <MealMenu
+            mealName='Noodles'
+            image={`${process.env.PUBLIC_URL}/assets/img/tea4.png`}
+          />
+        </div>
+      </div>
+
+      <div className='min-[1120px]:px-[100px]'>
+        <SectionHead title='Drinks' />
+        <div className='mt-5 grid w-full min-[420px]:grid-cols-2 min-[810px]:grid-cols-3 min-[1160px]:grid-cols-4 gap-4'>
+          <MealMenu
+            mealName='Jollof Rice'
+            image={`${process.env.PUBLIC_URL}/assets/img/drink1.png`}
+          />
+          <MealMenu
+            mealName='Fried Rice'
+            image={`${process.env.PUBLIC_URL}/assets/img/drink2.png`}
+          />
+          <MealMenu
+            mealName='Beans and plantain'
+            image={`${process.env.PUBLIC_URL}/assets/img/drink3.png`}
+          />
+          <MealMenu
+            mealName='Noodles'
+            image={`${process.env.PUBLIC_URL}/assets/img/drink4.png`}
+          />
+        </div>
+      </div>
+
+      <div className='min-[1120px]:px-[100px]'>
+        <SectionHead title='Ice Cream' />
+        <div className='mt-5 grid w-full min-[420px]:grid-cols-2 min-[810px]:grid-cols-3 min-[1160px]:grid-cols-4 gap-4'>
+          <MealMenu
+            mealName='Jollof Rice'
+            image={`${process.env.PUBLIC_URL}/assets/img/icecream1.png`}
+          />
+          <MealMenu
+            mealName='Fried Rice'
+            image={`${process.env.PUBLIC_URL}/assets/img/icecream2.png`}
+          />
+          <MealMenu
+            mealName='Beans and plantain'
+            image={`${process.env.PUBLIC_URL}/assets/img/icecream3.png`}
+          />
+          <MealMenu
+            mealName='Noodles'
+            image={`${process.env.PUBLIC_URL}/assets/img/icecream4.png`}
+          />
+        </div>
+      </div>
+
+      <div className='min-[1120px]:px-[100px]'>
+        <SectionHead title='Swallow' />
+        <div className='mt-5 grid w-full min-[420px]:grid-cols-2 min-[810px]:grid-cols-3 min-[1160px]:grid-cols-4 gap-4'>
+          <MealMenu
+            mealName='Jollof Rice'
+            image={`${process.env.PUBLIC_URL}/assets/img/swallow1.png`}
+          />
+          <MealMenu
+            mealName='Fried Rice'
+            image={`${process.env.PUBLIC_URL}/assets/img/swallow2.png`}
+          />
+          <MealMenu
+            mealName='Beans and plantain'
+            image={`${process.env.PUBLIC_URL}/assets/img/swallow3.png`}
+          />
+          <MealMenu
+            mealName='Noodles'
+            image={`${process.env.PUBLIC_URL}/assets/img/swallow4.png`}
+          />
+        </div>
+      </div> */
+
+/* <MealMenu
+            mealName='Egg Roll'
+            image={`${process.env.PUBLIC_URL}/assets/img/snacks2.png`}
+            onHandleAddCart={onHandleAddCart}
+          />
+          <MealMenu
+            mealName='Shawarma'
+            image={`${process.env.PUBLIC_URL}/assets/img/snacks3.png`}
+            onHandleAddCart={onHandleAddCart}
+          />
+          <MealMenu
+            mealName='Chicken Pie'
+            image={`${process.env.PUBLIC_URL}/assets/img/snacks4.png`}
+            onHandleAddCart={onHandleAddCart}
+          /> */

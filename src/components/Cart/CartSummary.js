@@ -5,7 +5,7 @@ function CartSummary ({ setStatus }) {
       <div className='h-[2px] mt-10 w-full bg-[hsl(218,17%,91%)] mb-3'></div>
       <div className='flex justify-between mb-[16px] mt-[20px]'>
         <p>Sub Total</p>
-        <p>$89.50</p>
+        <p>₦89.50</p>
       </div>
       <div className='flex justify-between  mb-[16px]'>
         <p>{`Tax (2%)`}</p>
